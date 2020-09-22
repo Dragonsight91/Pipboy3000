@@ -1,187 +1,575 @@
 {
-  "version":"a1.0_r20181006",
-  "info":"This part specifies the general program configuration.\n\nuseRFID:\n - true: uses the UUID it gets from the RFID reader.\n  - false: uses user input from commandline.\n\nloadCal: enables or disables loading quests from google calendar\n\nautoload: enables loading from calendar without the need to say yes\n\n",
-
-  "useRFID":true,
-  "Serial":true,
-  "Ports":{
-    "Windows":"COM3",
-    "Linux":""
-  },
-
-  "loadNotes":false,
-
-  "loadCal":false,
-  "autoload":false,
-  "token":"configs/Gservice/token.json",
-  "cliSecret_G":"configs/Gservice/client_secrets.json",
-  "calID":"voeb4e13n53m3lcho4ievp6pb26djqbl@import.calendar.google.com",
-  "events":"configs/events.json",
-
-  "fullscreen":false,
-  "effectlist":["STR","PE","EN","CH","IN","AG","LU"],
-  "color" : [0,255,0],
-  "icon_path":"images/images.png",
-  "font":"configs/fonts/monofonto.ttf",
-  "background":[0,0,0],
-  "header_draw": {
-    "info":"This is the header_draw object. it holds parameters for drawing most of the stuff you see. These values are percentage values, so header_line_thick:0.5496 means that the line thickness is 0.5496% of the screen height.",
-    "text_h":3,
-    "header_line_thick": 0.5496,
-    "start_header_w" : 5.148,
-    "end_header_w" : 95.6013,
-    "start_header_h": 3.8488,
-    "end_header_h" :5.87,
-    "end_title" : 45.6051,
-    "end_HP" : 62.1312,
-    "end_AP" : 76.3696,
-    "start_select": 89.8559,
-    "end_select":95.5535
-  },
-
-  "player":{
-    "info":"The Default Player object. This contains all info about the player. The base Values can be edited.",
-    "AP":0,
-    "HP":0,
-    "carrying":0,
-    "RAD":0,
-    "maxWeight":100,
-    "maxAP":8,
-    "maxHP":190,
-    "keychain":[],
-    "STR":{
-      "info":"This is the STR object. It holds the info about the carrying capacity of the player and the strength effect. The carrying capacity is calculated like this: (base+amount*multiplier",
-      "multiplier":20,
-      "base":6,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
+    "version": "a1.0_r20181006",
+    "info": "This part specifies the general program configuration.\n\nuseRFID:\n - true: uses the UUID it gets from the RFID reader.\n  - false: uses user input from commandline.\n\nloadCal: enables or disables loading quests from google calendar\n\nautoload: enables loading from calendar without the need to say yes\n\n",
+    "useRFID": true,
+    "Serial": true,
+    "Ports": {
+        "Windows": "COM3",
+        "Linux": ""
     },
-    "PE":{
-      "base":6,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
+    "loadNotes": false,
+    "loadCal": false,
+    "autoload": false,
+    "token": "configs/Gservice/token.json",
+    "cliSecret_G": "configs/Gservice/client_secrets.json",
+    "calID": "voeb4e13n53m3lcho4ievp6pb26djqbl@import.calendar.google.com",
+    "events": "configs/events.json",
+    "fullscreen": false,
+    "effectlist": [
+        "STR",
+        "PE",
+        "EN",
+        "CH",
+        "IN",
+        "AG",
+        "LU"
+    ],
+    "color": [
+        0,
+        255,
+        0
+    ],
+    "icon_path": "images/images.png",
+    "font": "configs/fonts/monofonto.ttf",
+    "background": [
+        0,
+        0,
+        0
+    ],
+    "header_draw": {
+        "info": "This is the header_draw object. it holds parameters for drawing most of the stuff you see. These values are percentage values, so header_line_thick:0.5496 means that the line thickness is 0.5496% of the screen height.",
+        "text_h": 3,
+        "header_line_thick": 0.5496,
+        "start_header_w": 5.148,
+        "end_header_w": 95.6013,
+        "start_header_h": 3.8488,
+        "end_header_h": 5.87,
+        "end_title": 45.6051,
+        "end_HP": 62.1312,
+        "end_AP": 76.3696,
+        "start_select": 89.8559,
+        "end_select": 95.5535
     },
-    "EN":{
-      "base":5,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
+    "player": {
+        "info": "The Default Player object. This contains all info about the player. The base Values can be edited.",
+        "AP": 0,
+        "HP": 0,
+        "carrying": 0,
+        "RAD": 0,
+        "maxWeight": 100,
+        "maxAP": 8,
+        "maxHP": 190,
+        "keychain": [],
+        "STR": {
+            "info": "This is the STR object. It holds the info about the carrying capacity of the player and the strength effect. The carrying capacity is calculated like this: (base+amount*multiplier",
+            "multiplier": 20,
+            "base": 6,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "PE": {
+            "base": 6,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "EN": {
+            "base": 5,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "CH": {
+            "base": 5,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "IN": {
+            "base": 7,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "AG": {
+            "base": 6,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "LU": {
+            "base": 5,
+            "armor": 0,
+            "amount": 3,
+            "timeout": 100000
+        },
+        "equipped": {
+            "info": "This is the equipped object. It holds the information about the equipped armor and wether or not armor is equipped.",
+            "helmet": false,
+            "armor": false,
+            "items": {
+                "helmet": "",
+                "armor": ""
+            }
+        }
     },
-    "CH":{
-      "base":5,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
-    },
-    "IN":{
-      "base":7,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
-    },
-    "AG":{
-      "base":6,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
-    },
-    "LU":{
-      "base":5,
-      "armor":0,
-      "amount":3,
-      "timeout":100000
-    },
-    "equipped":{
-      "info":"This is the equipped object. It holds the information about the equipped armor and wether or not armor is equipped.",
-      "helmet":false,
-      "armor":false,
-      "items":{
-        "helmet":"",
-        "armor":""
-      }
+    "icons": {
+        "Combat shotgun": [
+            "gui/FALLOUT_ICONS/WEAPONS/combat_shotgun_icon.png", [
+                25,
+                35
+            ]
+        ],
+        "Assault rifle": [
+            "gui/FALLOUT_ICONS/WEAPONS/assault_rifle_icon.png", [
+                20,
+                35
+            ]
+        ],
+        ".32 pistol": [
+            "gui/FALLOUT_ICONS/WEAPONS/32_pistol_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "10mm pistol": [
+            "gui/FALLOUT_ICONS/WEAPONS/10mm_pistol_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Chinese pistol": [
+            "gui/FALLOUT_ICONS/WEAPONS/chinese_pistol_icon.png", [
+                25,
+                35
+            ]
+        ],
+        "Dart Gun": [
+            "gui/FALLOUT_ICONS/WEAPONS/dart_gun_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Scoped .44 Magnum": [
+            "gui/FALLOUT_ICONS/WEAPONS/scoped_.44_magnum_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "BB gun": [
+            "gui/FALLOUT_ICONS/WEAPONS/bb_gun_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Chinese assault rifle": [
+            "gui/FALLOUT_ICONS/WEAPONS/assault_rifle_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Hunting rifle": [
+            "gui/FALLOUT_ICONS/WEAPONS/hunting_rifle_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Lincoln's repeater": [
+            "gui/FALLOUT_ICONS/WEAPONS/lincoln's_repeater_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Railway rifle": [
+            "gui/FALLOUT_ICONS/WEAPONS/railway_rifle_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "10mm submachine gun": [
+            "gui/FALLOUT_ICONS/WEAPONS/10mm_smg_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Combat knife": [
+            "gui/FALLOUT_ICONS/WEAPONS/combat_knife_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Knife": [
+            "gui/FALLOUT_ICONS/WEAPONS/knife_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Laser pistol": [
+            "gui/FALLOUT_ICONS/WEAPONS/laser_pistol_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Mesmetron": [
+            "gui/FALLOUT_ICONS/WEAPONS/mesmetron_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Plasma pistol": [
+            "gui/FALLOUT_ICONS/WEAPONS/plasma_pistol_icon.png", [
+                25,
+                35
+            ]
+        ],
+        "Rolling pin": [
+            "gui/FALLOUT_ICONS/WEAPONS/rolling_pin_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Sawed-off shotgun": [
+            "gui/FALLOUT_ICONS/WEAPONS/sawed-off_shotgun_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Sledgehammer": [
+            "gui/FALLOUT_ICONS/WEAPONS/sledgehammer_icon.png", [
+                22,
+                35
+            ]
+        ],
+        "Sniper rifle": [
+            "gui/FALLOUT_ICONS/WEAPONS/sniper_rifle_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Tire iron": [
+            "gui/FALLOUT_ICONS/WEAPONS/tire_iron_icon.png", [
+                20,
+                35
+            ]
+        ],
+        "Combat armor": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_combat_armor.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Wasteland wanderer outfit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_wasteland_wanderer_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Wasteland settler outfit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_wasteland_wanderer_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Wasteland legend outfit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_merc_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Armored Vault 101 jumpsuit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_armored_vault_suit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Vault 101 jumpsuit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_Vault_suit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Vault 101 security armor": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_Vault_security_armor.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Mysterious Stranger": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_Vault_suit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Naughty nightwear": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_pajamas.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Sexy sleepwear": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_pajamas.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Power armor": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_power_armor.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Pre-War businesswear": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_business_suit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Pre-War casualwear": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Pre-War parkstroller": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Pre-War relaxedwear": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Pre-War spring outfit": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Sheriff's duster": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_cowboy_duster_outfit.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Leather armor": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_leather_armor.png", [
+                12.5,
+                35
+            ]
+        ],
+        "Wanderer\"s leather armor": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_leather_armor.png", [
+                15,
+                30
+            ]
+        ],
+        "Hockey mask": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_hocky_mask.png", [
+                15,
+                25
+            ]
+        ],
+        "Sheriff\"s hat": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_sheriffs_hat.png", [
+                25,
+                20
+            ]
+        ],
+        "Pre-War bonnet": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_prewar_hat.png", [
+                23,
+                20
+            ]
+        ],
+        "Makeshift gas mask": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_makeshift_gasmask.png", [
+                15,
+                25
+            ]
+        ],
+        "Bandana": [
+            "gui/FALLOUT_ICONS/APPAREL/Icon_bandana.png", [
+                20,
+                25
+            ]
+        ],
+        "Beer": [
+            "gui/FALLOUT_ICONS/AID/Icon_drink.png", [
+                20,
+                35
+            ]
+        ],
+        "Berry Mentats": [
+            "gui/FALLOUT_ICONS/AID/Icon_Mentats.png", [
+                20,
+                25
+            ]
+        ],
+        "Orange Mentats": [
+            "gui/FALLOUT_ICONS/AID/Icon_Mentats.png", [
+                20,
+                25
+            ]
+        ],
+        "Grape Mentats": [
+            "gui/FALLOUT_ICONS/AID/Icon_Mentats.png", [
+                20,
+                25
+            ]
+        ],
+        "Mentats": [
+            "gui/FALLOUT_ICONS/AID/Icon_Mentats.png", [
+                20,
+                25
+            ]
+        ],
+        "Bubblegum": [
+            "gui/FALLOUT_ICONS/AID/Icon_bubble_gum.png", [
+                20,
+                20
+            ]
+        ],
+        "Buffout": [
+            "gui/FALLOUT_ICONS/AID/Icon_Buffout.png", [
+                20,
+                25
+            ]
+        ],
+        "Dandy Boy Apples": [
+            "gui/FALLOUT_ICONS/AID/Icon_dandy_apples.png", [
+                20,
+                25
+            ]
+        ],
+        "Dirty water": [
+            "gui/FALLOUT_ICONS/AID/Icon_water.png", [
+                15,
+                25
+            ]
+        ],
+        "Fancy Lads Snack Cakes": [
+            "gui/FALLOUT_ICONS/AID/Icon_fancy_cakes.png", [
+                20,
+                25
+            ]
+        ],
+        "Fresh Apple": [
+            "gui/FALLOUT_ICONS/AID/Icon_apple.png", [
+                15,
+                25
+            ]
+        ],
+        "Fresh carrot": [
+            "gui/FALLOUT_ICONS/AID/Icon_carrot.png", [
+                15,
+                25
+            ]
+        ],
+        "InstaMash": [
+            "gui/FALLOUT_ICONS/AID/Icon_InstaMash.png", [
+                20,
+                25
+            ]
+        ],
+        "Jet": [
+            "gui/FALLOUT_ICONS/AID/Icon_jet.png", [
+                15,
+                25
+            ]
+        ],
+        "RadAway": [
+            "gui/FALLOUT_ICONS/AID/Icon_RadAway.png", [
+                15,
+                30
+            ]
+        ],
+        "Ultrajet": [
+            "gui/FALLOUT_ICONS/AID/Icon_jet.png", [
+                15,
+                25
+            ]
+        ],
+        "Nuka-Cola": [
+            "gui/FALLOUT_ICONS/AID/Icon_cola.png", [
+                15,
+                25
+            ]
+        ],
+        "Nuka-Cola Quantum": [
+            "gui/FALLOUT_ICONS/AID/Icon_cola.png", [
+                15,
+                25
+            ]
+        ],
+        "Psycho": [
+            "gui/FALLOUT_ICONS/AID/Icon_psycho.png", [
+                15,
+                25
+            ]
+        ],
+        "Purified water": [
+            "gui/FALLOUT_ICONS/AID/Icon_water.png", [
+                15,
+                25
+            ]
+        ],
+        "Rad-X": [
+            "gui/FALLOUT_ICONS/AID/Icon_Rad-X.png", [
+                15,
+                25
+            ]
+        ],
+        "Salisbury Steak": [
+            "gui/FALLOUT_ICONS/AID/Icon_salisbury_steak.png", [
+                15,
+                25
+            ]
+        ],
+        "Med-X": [
+            "gui/FALLOUT_ICONS/AID/Icon_Med-X.png", [
+                15,
+                25
+            ]
+        ],
+        "Stimpack": [
+            "gui/FALLOUT_ICONS/AID/Icon_stimpak.png", [
+                15,
+                25
+            ]
+        ],
+        "Sugar Bombs": [
+            "gui/FALLOUT_ICONS/AID/Icon_Sugar_Bombs.png", [
+                10,
+                25
+            ]
+        ],
+        "Vodka": [
+            "gui/FALLOUT_ICONS/AID/Icon_vodka.png", [
+                15,
+                25
+            ]
+        ],
+        "Scotch": [
+            "gui/FALLOUT_ICONS/AID/Icon_Scotch.png", [
+                15,
+                25
+            ]
+        ],
+        "Whiskey": [
+            "gui/FALLOUT_ICONS/AID/Icon_whiskey.png", [
+                15,
+                25
+            ]
+        ],
+        "Wine": [
+            "gui/FALLOUT_ICONS/AID/Icon_wine.png", [
+                15,
+                25
+            ]
+        ]
     }
-  },
-
-  "icons":{
-      "Combat shotgun":["gui/FALLOUT_ICONS/WEAPONS/Combat_shotgun_icon.png",[25,35]],
-      "Assault rifle":["gui/FALLOUT_ICONS/WEAPONS/Assault_rifle_icon.png",[20,35]],
-      ".32 pistol":["gui/FALLOUT_ICONS/WEAPONS/32_pistol_icon.png",[20,35]],
-      "10mm pistol":["gui/FALLOUT_ICONS/WEAPONS/10mm_pistol_icon.png",[20,35]],
-      "Chinese pistol":["gui/FALLOUT_ICONS/WEAPONS/Chinese_pistol_icon.png",[25,35]],
-      "Dart Gun":["gui/FALLOUT_ICONS/WEAPONS/Dart_gun_icon.png",[20,35]],
-      "Scoped .44 Magnum":["gui/FALLOUT_ICONS/WEAPONS/Scoped_.44_magnum_icon.png",[20,35]],
-      "BB gun":["gui/FALLOUT_ICONS/WEAPONS/BB_gun_icon.png",[20,35]],
-      "Chinese assault rifle":["gui/FALLOUT_ICONS/WEAPONS/Assault_rifle_icon.png",[20,35]],
-      "Hunting rifle":["gui/FALLOUT_ICONS/WEAPONS/Hunting_rifle_icon.png",[20,35]],
-      "Lincoln's repeater":["gui/FALLOUT_ICONS/WEAPONS/Lincoln's_repeater_icon.png",[20,35]],
-      "Railway rifle":["gui/FALLOUT_ICONS/WEAPONS/Railway_rifle_icon.png",[20,35]],
-      "10mm submachine gun":["gui/FALLOUT_ICONS/WEAPONS/10mm_SMG_icon.png",[20,35]],
-      "Combat knife":["gui/FALLOUT_ICONS/WEAPONS/combat_knife_icon.png",[20,35]],
-      "Knife":["gui/FALLOUT_ICONS/WEAPONS/knife_icon.png",[20,35]],
-      "Laser pistol":["gui/FALLOUT_ICONS/WEAPONS/Laser_pistol_icon.png",[20,35]],
-      "Mesmetron":["gui/FALLOUT_ICONS/WEAPONS/Mesmetron_icon.png",[20,35]],
-      "Plasma pistol":["gui/FALLOUT_ICONS/WEAPONS/Plasma_pistol_icon.png",[25,35]],
-      "Rolling pin":["gui/FALLOUT_ICONS/WEAPONS/Rolling_pin_icon.png",[20,35]],
-      "Sawed-off shotgun":["gui/FALLOUT_ICONS/WEAPONS/Sawed-off_shotgun_icon.png",[20,35]],
-      "Sledgehammer":["gui/FALLOUT_ICONS/WEAPONS/Sledgehammer_icon.png",[22,35]],
-      "Sniper rifle":["gui/FALLOUT_ICONS/WEAPONS/Sniper_rifle_icon.png",[20,35]],
-      "Tire iron":["gui/FALLOUT_ICONS/WEAPONS/Tire_iron_icon.png",[20,35]],
-
-      "Combat armor":["gui/FALLOUT_ICONS/APPAREL/Icon_combat_armor.png",[12.5,35]],
-      "Wasteland wanderer outfit":["gui/FALLOUT_ICONS/APPAREL/Icon_wasteland_wanderer_outfit.png",[12.5,35]],
-      "Wasteland settler outfit":["gui/FALLOUT_ICONS/APPAREL/Icon_wasteland_wanderer_outfit.png",[12.5,35]],
-      "Wasteland legend outfit":["gui/FALLOUT_ICONS/APPAREL/Icon_merc_outfit.png",[12.5,35]],
-      "Armored Vault 101 jumpsuit":["gui/FALLOUT_ICONS/APPAREL/Icon_armored_vault_suit.png",[12.5,35]],
-      "Vault 101 jumpsuit":["gui/FALLOUT_ICONS/APPAREL/Icon_vault_suit.png",[12.5,35]],
-      "Vault 101 security armor":["gui/FALLOUT_ICONS/APPAREL/Icon_vault_security_armor.png",[12.5,35]],
-      "Mysterious Stranger":["gui/FALLOUT_ICONS/APPAREL/Icon_vault_suit.png",[12.5,35]],
-      "Naughty nightwear":["gui/FALLOUT_ICONS/APPAREL/Icon_pajamas.png",[12.5,35]],
-      "Sexy sleepwear":["gui/FALLOUT_ICONS/APPAREL/Icon_pajamas.png",[12.5,35]],
-      "Power armor":["gui/FALLOUT_ICONS/APPAREL/Icon_power_armor.png",[12.5,35]],
-      "Pre-War businesswear":["gui/FALLOUT_ICONS/APPAREL/Icon_business_suit.png",[12.5,35]],
-      "Pre-War casualwear":["gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png",[12.5,35]],
-      "Pre-War parkstroller":["gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png",[12.5,35]],
-      "Pre-War relaxedwear":["gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png",[12.5,35]],
-      "Pre-War spring outfit":["gui/FALLOUT_ICONS/APPAREL/Icon_prewar_outfit.png",[12.5,35]],
-      "Sheriff's duster":["gui/FALLOUT_ICONS/APPAREL/Icon_cowboy_duster_outfit.png",[12.5,35]],
-      "Leather armor":["gui/FALLOUT_ICONS/APPAREL/Icon_leather_armor.png",[12.5,35]],
-      "Wanderer\"s leather armor":["gui/FALLOUT_ICONS/APPAREL/Icon_leather_armor.png",[15,30]],
-      "Hockey mask":["gui/FALLOUT_ICONS/APPAREL/Icon_hocky_mask.png",[15,25]],
-      "Sheriff\"s hat":["gui/FALLOUT_ICONS/APPAREL/Icon_sheriffs_hat.png",[25,20]],
-      "Pre-War bonnet":["gui/FALLOUT_ICONS/APPAREL/Icon_prewar_hat.png",[23,20]],
-      "Makeshift gas mask":["gui/FALLOUT_ICONS/APPAREL/Icon_makeshift_gasmask.png",[15,25]],
-      "Bandana":["gui/FALLOUT_ICONS/APPAREL/Icon_bandana.png",[20,25]],
-
-      "Beer":["gui/FALLOUT_ICONS/AID/Icon_drink.png",[20,35]],
-      "Berry Mentats":["gui/FALLOUT_ICONS/AID/Icon_mentats.png",[20,25]],
-      "Orange Mentats":["gui/FALLOUT_ICONS/AID/Icon_mentats.png",[20,25]],
-      "Grape Mentats":["gui/FALLOUT_ICONS/AID/Icon_mentats.png",[20,25]],
-      "Mentats":["gui/FALLOUT_ICONS/AID/Icon_mentats.png",[20,25]],
-      "Bubblegum":["gui/FALLOUT_ICONS/AID/Icon_bubble_gum.png",[20,20]],
-      "Buffout":["gui/FALLOUT_ICONS/AID/Icon_Buffout.png",[20,25]],
-      "Dandy Boy Apples":["gui/FALLOUT_ICONS/AID/Icon_dandy_apples.png",[20,25]],
-      "Dirty water":["gui/FALLOUT_ICONS/AID/Icon_water.png",[15,25]],
-      "Fancy Lads Snack Cakes":["gui/FALLOUT_ICONS/AID/Icon_fancy_cakes.png",[20,25]],
-      "Fresh Apple":["gui/FALLOUT_ICONS/AID/Icon_apple.png",[15,25]],
-      "Fresh carrot":["gui/FALLOUT_ICONS/AID/Icon_carrot.png",[15,25]],
-      "InstaMash":["gui/FALLOUT_ICONS/AID/Icon_InstaMash.png",[20,25]],
-      "Jet":["gui/FALLOUT_ICONS/AID/Icon_jet.png",[15,25]],
-      "RadAway":["gui/FALLOUT_ICONS/AID/Icon_RadAway.png",[15,30]],
-      "Ultrajet":["gui/FALLOUT_ICONS/AID/Icon_jet.png",[15,25]],
-      "Nuka-Cola":["gui/FALLOUT_ICONS/AID/Icon_cola.png",[15,25]],
-      "Nuka-Cola Quantum":["gui/FALLOUT_ICONS/AID/Icon_cola.png",[15,25]],
-      "Psycho":["gui/FALLOUT_ICONS/AID/Icon_psycho.png",[15,25]],
-      "Purified water":["gui/FALLOUT_ICONS/AID/Icon_water.png",[15,25]],
-      "Rad-X":["gui/FALLOUT_ICONS/AID/Icon_Rad-X.png",[15,25]],
-      "Salisbury Steak":["gui/FALLOUT_ICONS/AID/Icon_salisbury_steak.png",[15,25]],
-      "Med-X":["gui/FALLOUT_ICONS/AID/Icon_Med-X.png",[15,25]],
-      "Stimpack":["gui/FALLOUT_ICONS/AID/Icon_stimpak.png",[15,25]],
-      "Sugar Bombs":["gui/FALLOUT_ICONS/AID/Icon_Sugar_Bombs.png",[10,25]],
-      "Vodka":["gui/FALLOUT_ICONS/AID/Icon_vodka.png",[15,25]],
-      "Scotch":["gui/FALLOUT_ICONS/AID/Icon_scotch.png",[15,25]],
-      "Whiskey":["gui/FALLOUT_ICONS/AID/Icon_whiskey.png",[15,25]],
-      "Wine":["gui/FALLOUT_ICONS/AID/Icon_wine.png",[15,25]]
-      }
 }

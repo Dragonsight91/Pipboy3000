@@ -2,17 +2,14 @@
     "version": "a1.0_r20181006",
     "info": "This part specifies the general program configuration.\n\nuseRFID:\n - true: uses the UUID it gets from the RFID reader.\n  - false: uses user input from commandline.\n\nloadCal: enables or disables loading quests from google calendar\n\nautoload: enables loading from calendar without the need to say yes\n\n",
     "useRFID": true,
-    "Serial": true,
-    "Ports": {
-        "Windows": "COM3",
-        "Linux": ""
-    },
+    "Serial": false,
+    "port": "",
     "loadNotes": false,
     "loadCal": false,
     "autoload": false,
-    "token": "configs/Gservice/token.json",
-    "cliSecret_G": "configs/Gservice/client_secrets.json",
-    "calID": "voeb4e13n53m3lcho4ievp6pb26djqbl@import.calendar.google.com",
+    "token": "",
+    "cliSecret_G": "",
+    "calID": "",
     "events": "configs/events.json",
     "fullscreen": false,
     "effectlist": [
